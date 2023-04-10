@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #00235B;
+}
+
+.wrapper {
+    margin: 70px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 265px);
+}
+
+.wrapper .note {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.wrapper li {
+    background-color: #fff;
+    list-style: none;
+    height: 250px;
+    border-radius: 10px;
+    padding: 15px 20px 25px;
+}
+
+.add-box,
+.icon,
+.bottom-content,
+.setting .menu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.add-box {
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.add-box .icon {
+    border: 2px dashed #E21818;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #E21818;
+    justify-content: center;
+
+}
+
+.add-box P {
+    color: #E21818;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+
+.note p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.note span {
+    color: rgb(54, 46, 34);
+    display: block;
+    margin-top: 10px;
+
+}
+
+.note .bottom-content {
+    padding-top: 10px;
+    border-top: 1px solid rgb(54, 46, 34);
+    margin-top: 5px;
+}
+
+.bottom-content span {
+    color: dimgrey;
+    font-size: 14px;
+
+}
+
+.bottom-content .setting i {
+    color: dimgray;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+.setting {
+    position: relative;
+}
+
+.setting .menu {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: -45;
+    padding: 5px 0;
+    background-color: #fff;
+    bottom: 0;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 0.2s;
+
+}
+
+.setting.show .menu {
+    transform: scale(1);
+}
+
+.setting .menu li {
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border-radius: 0;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 17px 15px;
+
+
+
+}
+
+.menu li:hover {
+    background-color: #cbc5c5;
+}
+
+.menu li i {
+    padding-right: 8px;
+}
+
+.pop-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 100%;
+    width: 100%;
+}
+
+.pop-box .pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 400px;
+    width: 100%;
+
+
+}
+
+.pop-box, .pop-box .pop{
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.2s ease;
+}
+.pop-box.show, .pop-box.show .pop{
+    opacity: 1;
+    pointer-events:auto;
+}
+
+.pop .content {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+
+
+}
+
+.pop .content header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #19376D;
+}
+
+.content header p {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.content header i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.content header i:hover {
+    color: #E21818;
+
+
+}
+
+.content form {
+    margin: 15px 25px 35px;
+}
+
+.content form input {
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+.content .row-desc {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    border-radius: 4px;
+    
+}
+
+.content .row-desc textarea{
+    margin-top: 8px;
+    border-radius: 4px;
+    outline: none;
+    padding: 3px;
+}
+
+.content button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: #00235B;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
